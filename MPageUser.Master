@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MPageUser.master.cs" Inherits="PRODUIT_FINAL.MPageUser" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="img/styleUser.css" type="text/css" />
+	<title>MPUser</title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+       
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="form1" runat="server"><asp:ScriptManager ID="ScriptManager2" runat="server"></asp:ScriptManager> 
+   
+	<div id="page" align="center">
+		<div id="toppage" align="center">
+			<div id="date">
+			<div class="smalltext" style="padding:13px;"><strong>
+                  <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                                        	<ContentTemplate>
+                     <asp:Timer ID="Timer1" runat="server" Interval="60" OnTick="Timer1_Tick1"></asp:Timer> 
+                     <asp:Label ID="lblDate" runat="server" Text=""></asp:Label></ContentTemplate></asp:UpdatePanel> </strong></div>
+			</div>
+			<div id="topbar">
+				<div align="right" style="padding:12px;" class="smallwhitetext"><a href="#">Home</a> | <a href="#">Sitemap</a> | <a href="#">Contact Us</a></div>
+			</div>
+		</div>
+		<div id="header" align="center">
+			<div class="titletext" id="logo">
+				<div class="logotext" style="margin:30px">U<span class="orangelogotext">s</span>er</div> 
+			</div>
+			<div id="pagetitle">
+				<div id="title" class="titletext" align="right">
+                    <asp:Label ID="lblChemin" runat="server" Text=""></asp:Label>
+				</div>
+			    <div id="Div1" class="titletext" align="right">
+                    <asp:Label ID="lblNom" runat="server"></asp:Label>
+				    </div>
+			</div>
+		</div>
+		<div id="content" align="center">
+			<div id="menu" align="right">
+				<div align="right" style="width:189px; height:8px;"><img src="img/mnu_topshadow.gif" width="189" height="8" alt="mnutopshadow" /></div>
+				<div id="linksmenu" align="center">
+					<a href="user_ajouter_reclamation.aspx" title="Home">Ajouter Réclamation</a>
+					<a href="user_lst_reclamations.aspx" title="About Us">Mes Réclamations</a>
+					<a href="liste_reclam.aspx" title="Our Services">liste des reclamations</a>
+                    <a href="#" title="Our Services">Mes Réclamations en cours</a>
+					<a href="#" title="Contact Us">Mes Réclamation cloturées</a>
+				</div>
+				<div align="right" style="width:189px; height:8px;"><img src="img/mnu_bottomshadow.gif" width="189" height="8" alt="mnubottomshadow" /></div>
+			</div>
+		<div id="contenttext">
+			<div class="bodytext" style="padding:12px;" align="justify">
+				
+				  <div>
+						<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+						</asp:ContentPlaceHolder>
+				</div>
+			</div>
+			
+		</div>
+		<div id="footer" class="smallgraytext" align="center">
+			<br /> Your Company Name &copy; 2014<br />
+		</div>
+	</div>
+    </form>
+</body>
+</html>
